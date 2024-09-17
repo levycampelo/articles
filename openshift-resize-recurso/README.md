@@ -1,7 +1,7 @@
 ## Aumentar recursos do cluster OpenShift
 
-Neste artigo, vou demonstrar como aumentar recursos de CPU ou memória dos nodes do cluster Openshift.
-Nesse ambiente, usamos as seguintes versões:
+Neste artigo, vou demonstrar como aumentar recursos de CPU e\ou memória dos nodes do cluster Openshift.
+Nesse ambiente, usamos a seguinte versão:
 
 > **Cluster Openshift:** v4.12.49
 
@@ -18,4 +18,22 @@ oc adm top node
 ```bash
 oc get nodes 
 ```
- 
+
+- Agora, vamos remover o primeiro nó, no qual iremos alterar os recursos:
+```bash
+oc adm drain <nome-node> --delete-emptydir-data --ignore-daemonsets
+```
+* Se o cluster não conseguir realizar o drain no node, adicione `--force` ao final do comando.
+
+> **Observação:** O comando de drain pode varias de acordo com a versão do OCP.
+
+- Observe no comando abaixo quando o status do nó mudar para `SchedulingDisabled`:
+```bash
+oc get nodes
+...
+NAME                STATUS                   ROLES  AGE  VERSION 
+xpto-w6xpo-master-1 Ready,SchedulingDisabled master 260d v1.24.6+deccab3
+...
+```
+
+
