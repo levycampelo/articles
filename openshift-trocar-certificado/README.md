@@ -1,7 +1,7 @@
 ## Trocar o certificado do cluster OpenShift
 
 Neste artigo, vou demonstrar como trocar o certificado do cluster Openshift.
-Nesse ambiente, usamos as seguintes versões:
+Nesse ambiente, usamos a seguinte versão:
 
 > **Cluster Openshift:** v4.12.49
 
