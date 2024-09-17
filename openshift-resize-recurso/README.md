@@ -36,4 +36,10 @@ xpto-w6xpo-master-1 Ready,SchedulingDisabled master 260d v1.24.6+deccab3
 ...
 ```
 
+- Resize dos recursos:
+No meu caso esse cluster de OpenShift está em uma infraestrutura de VMware com vCenter, executei o seguinte procedimento:
+[^1]: Identifiquei o node e desligamos o servidor. (power-off).
+[^2]: Adicionei o recurso de CPU de 4vCPU para 8vCPU.
+[^3]: Adicionei o recurso de memória de 16GiB para 32GiB.
+[^4]: Ligamos o servidor. (power-on).
 
