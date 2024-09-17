@@ -8,3 +8,14 @@ Nesse ambiente, usamos as seguintes versões:
 ## Introdução:
 
 No Cluster de OpenShift, um redimensionamento de memória ou CPU em um node do cluster OpenShift pode ser necessário em várias situações, dependendo da carga de trabalho e das necessidades do cluster.
+
+- Verificar a utilização dos recursos:
+```bash
+oc adm top node
+```
+
+- Após identificar o node que precisa do resize, validar o node:
+```bash
+oc get nodes 
+```
+ 
