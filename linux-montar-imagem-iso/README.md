@@ -14,7 +14,7 @@ Em um dos ambientes que operamos, um dos servidores não possui acesso externo e
 $ scp levy@192.168.250.60:/tmp/rhel-8.8-x86_64.iso .
 ```
 ```bash
-$ mv rhel-8.8-x86_64.iso /opt/
+$ mv rhel-8.8-x86_64.iso /opt
 $ cd /opt
 $ mkdir RHEL
 $ mount -o loop,ro /opt/rhel-8.8-x86_64-dvd.iso /opt/RHEL
