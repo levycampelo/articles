@@ -21,7 +21,7 @@ $ apt-get update && sudo apt-get upgrade -y
 ```
 ### - Instalar dependencias
 ```bash
-$ apt-get install -y gnupg software-properties-common curl
+$ apt-get install gnupg software-properties-common curl -y
 ```
 ### - Adicionar o repo
 ```bash
@@ -30,11 +30,11 @@ apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_re
 ```
 ### - Atualizar os pacotes para incluir o terraform
 ```bash
-$ apt-get update
+$ apt-get update -y
 ```
 ### - Instalar o terraform
 ```bash
-$ apt-get install terraform
+$ apt-get install terraform -y
 ```
 ### - Validar instalação e versão:
 ```bash
