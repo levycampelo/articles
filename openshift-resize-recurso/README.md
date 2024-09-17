@@ -36,7 +36,7 @@ xpto-w6xpo-master-1 Ready,SchedulingDisabled master 260d v1.24.6+deccab3
 ...
 ```
 
-- Resize dos recursos:
+- Resize dos recursos:<br>
 
 No meu caso esse cluster de OpenShift está em uma infraestrutura de VMware com vCenter, executei o seguinte procedimento:
 [1]: Identifiquei o node e desligamos o servidor. (power-off).
