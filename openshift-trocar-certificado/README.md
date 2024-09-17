@@ -7,7 +7,7 @@ Nesse ambiente, usamos as seguintes versões:
 
 ## Introdução:
 
-No Cluster de OpenShift, o certificado é um arquivo que contém informações criptográficas que usamos para estabelecer e garantir a comunicação segura entre os componentes do cluster e com os clientes externos.
+No Cluster de OpenShift, o certificado é um arquivo que contém informações de segurança usadas para estabelecer e garantir a comunicação segura entre os componentes do cluster e com os clientes externos.
 
 - No comando abaixo, vamos criar uma nova secret no openshift contendo o novo certificado gerado, que inclui o certificado e a chave privada.
 
