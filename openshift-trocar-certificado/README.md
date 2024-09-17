@@ -1,7 +1,9 @@
 ## Trocar o certificado do cluster OpenShift
 
-Ambiente:
-- Cluster OpenShift 4.12
+Neste artigo, vou demonstrar como trocar o certificado do cluster Openshift.
+Nesse ambiente, usamos as seguintes versões:
+
+Cluster Openshift v4.12
 
 No Cluster de OpenShift, o certificado é um arquivo que contém informações criptográficas que usamos para estabelecer e garantir a comunicação segura entre os componentes do cluster e com os clientes externos.
 
