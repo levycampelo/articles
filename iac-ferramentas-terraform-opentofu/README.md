@@ -15,28 +15,28 @@ O Terraform é uma ferramenta desenvolvida pela HashiCorp que permite provisiona
 O OpenTofu é um fork de código aberto do popular Terraform desenvolvido pela HashiCorp. Esta ferramenta foca no uso e a possibilidade de modificação sob licença Apache 2.0. O OpenTofu é uma alternativa para aqueles que preferem ferramenta sem restrições de licença.
 
 ## Instalação do Terraform:
-### Atualizar os pacotes
+### - Atualizar os pacotes
 ```bash
 $ apt-get update && sudo apt-get upgrade -y
 ```
-### Instalar dependencias
+### - Instalar dependencias
 ```bash
 $ apt-get install -y gnupg software-properties-common curl
 ```
-### Adicionar o repo
+### - Adicionar o repo
 ```bash
 curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
 apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 ```
-### Atualizar os pacotes para incluir o terraform
+### - Atualizar os pacotes para incluir o terraform
 ```bash
 $ apt-get update
 ```
-### Instalar o terraform
+### - Instalar o terraform
 ```bash
 $ apt-get install terraform
 ```
-### Validar instalação e versão:
+### - Validar instalação e versão:
 ```bash
 root@DESKTOP-B6RBPK9:/home/levycampelo# terraform -v
 Terraform v1.9.5
