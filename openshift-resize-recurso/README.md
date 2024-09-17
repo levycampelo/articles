@@ -11,17 +11,17 @@ No Cluster de OpenShift, um redimensionamento de memória ou CPU em um node do c
 
 - Verificar a utilização dos recursos:
 ```bash
-oc adm top node
+$ oc adm top node
 ```
 
 - Após identificar o node que precisa do resize, validar o node:
 ```bash
-oc get nodes 
+$ oc get nodes 
 ```
 
 - Agora, vamos remover o primeiro nó, no qual iremos alterar os recursos:
 ```bash
-oc adm drain <nome-node> --delete-emptydir-data --ignore-daemonsets
+$ oc adm drain <nome-node> --delete-emptydir-data --ignore-daemonsets
 ```
 * Se o cluster não conseguir realizar o drain no node, adicione `--force` ao final do comando.
 
@@ -29,7 +29,7 @@ oc adm drain <nome-node> --delete-emptydir-data --ignore-daemonsets
 
 - Observe no comando abaixo quando o status do nó mudar para `SchedulingDisabled`:
 ```bash
-oc get nodes
+$ oc get nodes
 ...
 NAME                STATUS                   ROLES  AGE  VERSION 
 xpto-w6xpo-master-1 Ready,SchedulingDisabled master 260d v1.24.6+deccab3
@@ -39,7 +39,7 @@ xpto-w6xpo-master-1 Ready,SchedulingDisabled master 260d v1.24.6+deccab3
 - Resize dos recursos:
 
 No meu caso esse cluster de OpenShift está em uma infraestrutura de VMware com vCenter, executei o seguinte procedimento:
-
+```bash
 [1]: Identifiquei o node e desligamos o servidor. (power-off).
 
 [2]: Adicionei o recurso de CPU de 4vCPU para 8vCPU.
@@ -47,4 +47,17 @@ No meu caso esse cluster de OpenShift está em uma infraestrutura de VMware com 
 [3]: Adicionei o recurso de memória de 16GiB para 32GiB.
 
 [4]: Ligamos o servidor. (power-on).
+```
 
+- Retornar o node ao cluster:
+
+Quando o nó for inicializado, ele deve alterar o status para `Ready` novamente: 
+```bash
+$ oc get nodes
+...
+NAME                STATUS  ROLES  AGE  VERSION
+xpto-w6xpo-master-1 Ready   master 260d v1.24.6+deccab3
+...
+
+$ oc adm uncordon xpto-w6xpo-master-1
+```
