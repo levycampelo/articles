@@ -18,7 +18,8 @@ $ oc create secret tls custom-certs-default-2024 --cert=/openshift/certs/2024/ST
 
 - Neste comando, vamos configurar o controlador de Ingress para utilizar o novo segredo criado anteriormente.
 ```bash
-$ oc patch ingresscontroller.operator default --type=merge -p '{"spec":{"defaultCertificate": {"name": "custom-certs-default-2024"}}}' -n openshift-ingress-operator
+$ oc patch ingresscontroller.operator default --type=merge -p '{"spec":{"defaultCertificate": \
+{"name": "custom-certs-default-2024"}}}' -n openshift-ingress-operator
 ```
 
 - Após a alteração do controlador de Ingress, todos os pods no namespace openshift-ingress serão reiniciados.
@@ -36,7 +37,8 @@ $ oc delete pods --all -n openshift-ingress
 - Criar um ConfigMap (um objeto que armazena pares chave-valor) que aponta para o novo certificado (.crt).
 
 ```bash
-$ oc create configmap custom-ca-2024 --from-file=ca-bundle.crt=/openshift/certs/2024/STAR.apps.meudominio.com.br.crt -n openshift-config
+$ oc create configmap custom-ca-2024 --from-file=ca-bundle.crt=/openshift/certs/2024/STAR.apps.meudominio.com.br.crt \
+ -n openshift-config
 ```
 
 - Esse comando atualiza a configuração do certificado no OpenShift, adicionando o certificado novo.
