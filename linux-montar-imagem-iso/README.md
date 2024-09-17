@@ -11,12 +11,12 @@ Em um dos ambientes que operamos, um dos servidores não possui acesso externo e
 
 ## Comandos:
 ```bash
-scp levy@192.168.250.60:/tmp .
+$ scp levy@192.168.250.60:/tmp .
 ```
 ```bash
-cd /opt
-mkdir RHEL
-mount -o loop,ro /opt/rhel-8.8-x86_64-dvd.iso /opt/RHEL
+$ cd /opt
+$ mkdir RHEL
+$ mount -o loop,ro /opt/rhel-8.8-x86_64-dvd.iso /opt/RHEL
 ```
 ```bash
 $ vi /etc/yum.repos.d/rhel8.repo
