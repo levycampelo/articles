@@ -11,7 +11,8 @@ No Cluster de OpenShift, o certificado é um arquivo que contém informações c
 
 - No comando abaixo, vamos criar uma nova secret no openshift contendo o novo certificado gerado, que inclui o certificado e a chave privada.
 
-` $ oc create secret tls custom-certs-default-2024 --cert=/openshift/certs/2024/STAR.apps.meudominio.com.br.crt --key=/openshift/certs/2024/apps.meudominio.com.br.key -n openshift-ingress`
+```bash 
+$ oc create secret tls custom-certs-default-2024 --cert=/openshift/certs/2024/STAR.apps.meudominio.com.br.crt --key=/openshift/certs/2024/apps.meudominio.com.br.key -n openshift-ingress
 
 - Neste comando, vamos configurar o controlador de Ingress para utilizar o novo segredo criado anteriormente.
 
