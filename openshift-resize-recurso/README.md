@@ -42,16 +42,16 @@ No meu caso esse cluster de OpenShift está em uma infraestrutura de VMware com 
 ```bash
 [1]: Identifiquei o node e desligamos o servidor. (power-off).
 
-[2]: Adicionei o recurso de CPU de 4vCPU para 8vCPU.
+[2]: Alterei o recurso de CPU de 4vCPU para 8vCPU.
 
-[3]: Adicionei o recurso de memória de 16GiB para 32GiB.
+[3]: Alterei o recurso de memória de 16GiB para 32GiB.
 
 [4]: Ligamos o servidor. (power-on).
 ```
 
 - Retornar o node ao cluster:
 
-Quando o nó for inicializado, ele deve alterar o status para `Ready` novamente: 
+Quando o nó for inicializado, ele deve alterar o status para `Ready` novamente. Assim que atingir esse status, faremos o `uncordon` para adicioná-lo de volta ao cluster.
 ```bash
 $ oc get nodes
 ...
