@@ -24,7 +24,7 @@ $ subscription-manager repos --enable rhel-*-optional-rpms
 $ yum install redhat-support-tool
 ```
 
-- Exemplo para enviar must-gather:
+- Exemplo para enviar arquivo:
 ```bash
 $ redhat-support-tool addattachment -c <numero-chamado> <nome-do-arquivo>
 
