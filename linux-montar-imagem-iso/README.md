@@ -1,9 +1,9 @@
 ## Montar uma imagem ISO e ajustar repositório YUM
 
-Neste artigo, vou demonstrar como montar uma ISO e ajustar o repo YUM.
+Neste artigo, vou demonstrar como montar uma ISO e ajustar o repo YUM.<br>
 Nesse ambiente, usamos a seguinte versão:
 
-> **Sistema Operacional:** Red Hat Enterprise Linux 8.8
+> **Sistema Operacional:** Red Hat Enterprise Linux 8.8<br>
 > **Imagem:** rhel-8.8-x86_64.iso
 
 ## Introdução:
