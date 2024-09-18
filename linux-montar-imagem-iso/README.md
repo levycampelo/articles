@@ -7,7 +7,7 @@ Nesse ambiente, usamos a seguinte versão:
 > **Imagem:** rhel-8.8-x86_64.iso
 
 ## Introdução:
-Em um dos ambientes que operamos, um dos servidores não possui acesso externo e precisamos instalar um pacote que depende de algumas bibliotecas. Para isso,utilizamos a imagem ISO como fonte local para a instalação dos pacotes via YUM, eliminando a necessidade de acessar a internet.
+Em um dos ambientes que operamos, um dos servidores não possui acesso externo(internet) e precisamos instalar um pacote que depende de algumas bibliotecas. Para isso, utilizamos a imagem ISO como fonte local para a instalação dos pacotes via YUM, eliminando a necessidade de acessar a internet.
 
 ## Comandos:
 ```bash
