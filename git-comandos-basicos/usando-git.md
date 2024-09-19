@@ -1,13 +1,8 @@
----
-title: "Usando o Git"
-date: 2024-07-26T18:21:13-03:00
-draft: true
-authors:
-  - levy
-tags:
-  - GIT
----
+## Deploy automatizado com Netlify e GitHub
 
+Neste artigo, vou demonstrar como sincronizar repositorio local ao GitHub.<br>
+
+### Introdução
 Para subir o seu projeto que está localizado no seu computador (por exemplo no diretório /home/seu_usuario) para o GitHub, você pode seguir os passos básicos abaixo:
 
 ### Passo 1: Criar um repositório no GitHub
@@ -17,7 +12,7 @@ Para subir o seu projeto que está localizado no seu computador (por exemplo no 
 
 ### Passo 2: Preparar seu repositório local
 1.	Abra um terminal no seu computador.
-2.	Navegue até o diretório onde seu projeto está localizado usando o comando cd (por exemplo, cd /home/levy/rota).
+2.	Navegue até o diretório onde seu projeto está localizado usando o comando cd (por exemplo, cd /home/seu_usuario/projeto).
 3.	Verifique se o Git já está inicializado no seu projeto usando git status. Se o Git não estiver inicializado, use git init para iniciar o controle de versão Git no diretório.
 
 ### Passo 3: Adicionar e confirmar os arquivos
@@ -25,10 +20,15 @@ Para subir o seu projeto que está localizado no seu computador (por exemplo no 
 ```
 git add .
 ```
+ou um arquivo especifico.
+```
+git add meu_arquivo.sh
+```
+
 Isso adicionará todos os arquivos no diretório atual para serem monitorados pelo Git.
 2.	Em seguida, confirme as mudanças usando o comando git commit:
 ```
-git commit -m "Descreve as alterações"
+git commit -m "minha alterações"
 ```
 ### Passo 4: Conectar seu repositório local ao GitHub
 
@@ -39,7 +39,7 @@ git remote add origin https://github.com/seu-usuario/nome-do-repositorio.git
 ```
 3.	Finalmente, envie seu código para o GitHub usando o comando git push:
 ```
-git push -u origin master
+git push
 ```
 
 Isso empurra suas alterações locais para o branch principal (master) do seu repositório remoto no GitHub.
