@@ -1,7 +1,6 @@
 ## Deploy automatizado com Netlify e GitHub
 
 Neste artigo, vou demonstrar como sincronizar o seu site, onde o código esteja no GitHub com o Netlify.<br>
-Nesse ambiente, usamos a seguinte versão:
 
 ### Introdução
 O Netlify é um serviço de hospedagem para sistemas baseados em tecnologias front-end, que não necessitam de banco de dados ou linguagens back-end para funcionar. O Netlify é gratuito, basta se cadastrar e começar a usar.
