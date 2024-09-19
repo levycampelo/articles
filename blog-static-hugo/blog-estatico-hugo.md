@@ -1,13 +1,9 @@
----
-title: "Blog estático com Hugo"
-weight: 1
-date: 2024-07-23T08:48:36-03:00
-authors:
-  - levy
-tags:
-  - Blog Hugo
-draft: true
----
+## Utilizando blog estático HUGO
+
+Neste artigo, vou demonstrar como instalar o blog estático HUGO no WSL.<br>
+Nesse ambiente, usamos a seguinte versão:
+
+### Introdução
 HUGO é um gerador de sites estáticos escrito em Golang que tem ganhado muita visibilidade devido à sua rapidez na geração e compilação de conteúdos. Juntamente com o Jekyll, escrito em Ruby, ambos os geradores oferecem uma ampla gama de recursos, permitindo que você crie um site ou blog em minutos.
 
 ### Como instalar Hugo no Linux
