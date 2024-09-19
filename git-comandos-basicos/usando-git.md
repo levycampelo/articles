@@ -1,4 +1,4 @@
-## Deploy automatizado com Netlify e GitHub
+## Utilizando o GitHub
 
 Neste artigo, vou demonstrar como sincronizar repositorio local ao GitHub.<br>
 
