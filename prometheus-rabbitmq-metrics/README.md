@@ -8,19 +8,19 @@ Nesse ambiente, usamos a seguinte versão:
 > **Prometheus:** 2.46.0
 
 ## Introdução:
-Em um dos ambientes que operamos, um dos servidores não possui acesso externo(internet) e precisamos instalar um pacote que depende de algumas bibliotecas. Para isso, utilizamos a imagem ISO como fonte local para a instalação dos pacotes via YUM, eliminando a necessidade de acessar a internet.
+Em um dos novos ambientes que estamos deployando, temos uma infraestrutura operando com três servidores RabbitMQ para tratar toda a mensageria até chegar em nosso cluster de ACS. Devido a isso, temos a necessidade de monitorar as filas com mais facilidade. Por isso, adotamos o plugin do Prometheus no RabbitMQ.
 
-### Habilite o plugin RabbitMQ Prometheus: 
+### Habilitar o plugin RabbitMQ Prometheus: 
 ```bash
 # rabbitmq-plugins enable rabbitmq_prometheus
 ```
 
-### Visualizar metrics:
+### Visualizar as metrics localmente:
 ```bash
 http://192.168.250.12:15692/metrics
 ```
 
-### Adicionar ao prometheus:
+### Adicionar ao prometheus os RabbitMQ:
 ```bash
 - job_name: 'rabbitmq-metrics'
     # metrics plugin
