@@ -114,7 +114,7 @@ OK; writing new GUID partition table (GPT) to /dev/sdb.
 The operation has completed successfully.
 ```
 
-### formatar disco
+### Formatar disco:
 ```bash
 # mkfs -t xfs /dev/sdb1
 ```
