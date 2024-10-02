@@ -1,18 +1,21 @@
 ## Adicionar um novo disco no Linux 
 
-Neste artigo, vou demonstrar como adicionar um novo disco ao sistema operacional Linux.<br>
+Neste artigo, vou demonstrar como adicionar um novo disco no sistema operacional Linux.<br>
 Nesse ambiente, usamos a seguinte versão:
 
 > **Sistema Operacional:** Oracle Linux 8.10<br>
 > **Disco:** 4 TiB
 
 ## Introdução:
-Em um dos ambientes que operamos, um dos servidores não possui acesso externo(internet) e precisamos instalar um pacote que depende de algumas bibliotecas. Para isso, utilizamos a imagem ISO como fonte local para a instalação dos pacotes via YUM, eliminando a necessidade de acessar a internet.
+Em um dos ambientes que operamos, um dos servidores não possuía uma partição de backup para o armazenamento de 30 dias de coletas de informações. Com isso, adicionamos um novo disco de 4 TiB ao servidor.
 
 ### Criar novo diretório:
+```bash 
 mkdir -p backup
+```
 
 ### Lista via comando fdisk os discos:
+```bash
 # fdisk -l
 Disk /dev/sdb: 4 TiB, 4398046511104 bytes, 8589934592 sectors
 Units: sectors of 1 * 512 = 512 bytes
@@ -20,9 +23,10 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disklabel type: gpt
 Disk identifier: 4664AF5D-13F5-4E2F-8AB2-AF51A27542B5
-
+```
 
 ### Criar a partição e alterar tipo:  
+```bash
 gdisk /dev/sdb
 GPT fdisk (gdisk) version 1.0.3
 
@@ -108,17 +112,25 @@ PARTITIONS!!
 Do you want to proceed? (Y/N): y
 OK; writing new GUID partition table (GPT) to /dev/sdb.
 The operation has completed successfully.
+```
 
 ### formatar disco
-mkfs -t xfs /dev/sdb1
+```bash
+# mkfs -t xfs /dev/sdb1
+```
 
 ### Obter o uid:
-blkid
+```bash 
+# blkid
+```
 
 ### Ajustar o fstab:
+```bash
 # vi /etc/fstab
 UUID=f99db564-7fb1-43b1-a169-db4cc03ce624 /backup xfs   defaults        0 0
+```
 
 ### Montar o novo disco:
- mount -a
-
+```bash
+# mount -a
+```
