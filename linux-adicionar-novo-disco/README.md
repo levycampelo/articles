@@ -11,7 +11,7 @@ Em um dos ambientes que operamos, um dos servidores não possuía uma partição
 
 ### Criar novo diretório:
 ```bash 
-mkdir -p backup
+# mkdir -p backup
 ```
 
 ### Lista via comando fdisk os discos:
@@ -27,7 +27,7 @@ Disk identifier: 4664AF5D-13F5-4E2F-8AB2-AF51A27542B5
 
 ### Criar a partição e alterar tipo:  
 ```bash
-gdisk /dev/sdb
+# gdisk /dev/sdb
 GPT fdisk (gdisk) version 1.0.3
 
 Warning: Partition table header claims that the size of partition table
@@ -87,7 +87,7 @@ Partition number (1-128, default 1):
 First sector (34-8589934558, default = 2048) or {+-}size{KMGTP}:
 Last sector (2048-8589934558, default = 8589934558) or {+-}size{KMGTP}:
 Current type is 'Linux filesystem'
-Hex code or GUID (L to show codes, Enter = 8300): 8e00
+Hex code or GUID (L to show codes, Enter = 8300): 8e00 << código do tipo da partição
 Changed type of partition to 'Linux LVM'
 
 Command (? for help): p
