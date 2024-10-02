@@ -5,7 +5,7 @@ Nesse ambiente, usamos a seguinte versão:
 
 > **Sistema Operacional:** Oracle Linux 8 <br>
 > **RabbitMQ:** 3.12.2 <br>
-> **Prometheus:** 4.10.0
+> **Prometheus:** 2.46.0
 
 ## Introdução:
 Em um dos ambientes que operamos, um dos servidores não possui acesso externo(internet) e precisamos instalar um pacote que depende de algumas bibliotecas. Para isso, utilizamos a imagem ISO como fonte local para a instalação dos pacotes via YUM, eliminando a necessidade de acessar a internet.
@@ -20,7 +20,7 @@ Em um dos ambientes que operamos, um dos servidores não possui acesso externo(i
 http://192.168.250.12:15692/metrics
 ```
 
-### Adicionar ao prometheus
+### Adicionar ao prometheus:
 ```bash
 - job_name: 'rabbitmq-metrics'
     # metrics plugin
@@ -29,3 +29,4 @@ http://192.168.250.12:15692/metrics
     static_configs:
       - targets: ["192.168.250.12:15692","192.168.250.113:15692","192.168.250.115:15692"]
 ```
+![rabbitmq](/prometheus-rabbitmq-metrics/images/rabbitmq.png)
