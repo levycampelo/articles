@@ -15,6 +15,25 @@ Em um dos novos ambientes que estamos deployando, temos uma infraestrutura opera
 # rabbitmq-plugins enable rabbitmq_prometheus
 ```
 
+### Ajustar as metrics no arquivo rabbitmq.config:
+```bash
+[
+  {rabbit, [
+    {vm_memory_high_watermark_relative, 0.7},
+    {disk_free_limit, "20GB"}
+  ]},
+  {rabbitmq_prometheus, [
+    {return_per_object_metrics, true},
+    {return_detailed_metrics, true}
+  ]}
+].
+```
+
+### Reiniciar o serviço:
+```bash
+systemctl restart rabbitmq-server
+```
+
 ### Visualizar as metrics localmente:
 ```bash
 http://192.168.250.12:15692/metrics
