@@ -1,6 +1,6 @@
 ## Monitorar as metricas do RabbitMQ com prometheus
 
-Neste artigo, vou demonstrar como montar uma ISO e ajustar o repo YUM.<br>
+Neste artigo, vou demonstrar como monitorar um cluster RabbitMQ via Prometheus utilizando o plugin nativo.<br>
 Nesse ambiente, usamos a seguinte versão:
 
 > **Sistema Operacional:** Oracle Linux 8 <br>
@@ -8,7 +8,7 @@ Nesse ambiente, usamos a seguinte versão:
 > **Prometheus:** 2.46.0
 
 ## Introdução:
-Em um dos novos ambientes que estamos deployando, temos uma infraestrutura operando com três servidores RabbitMQ para tratar toda a mensageria até chegar em nosso cluster de ACS. Devido a isso, temos a necessidade de monitorar as filas com mais facilidade. Por isso, adotamos o plugin do Prometheus no RabbitMQ.
+Em um dos novos ambientes que estamos implantando, temos uma infraestrutura operando com três servidores RabbitMQ para gerenciar toda a mensageria até chegar ao nosso cluster de ACS. Devido a isso, temos a necessidade de monitorar as filas com mais facilidade. Por isso, adotamos o plugin do Prometheus no RabbitMQ.
 
 ### Habilitar o plugin RabbitMQ Prometheus: 
 ```bash
