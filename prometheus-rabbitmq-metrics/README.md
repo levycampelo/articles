@@ -48,4 +48,5 @@ http://192.168.250.12:15692/metrics
     static_configs:
       - targets: ["192.168.250.12:15692","192.168.250.113:15692","192.168.250.115:15692"]
 ```
-![rabbitmq](/prometheus-rabbitmq-metrics/images/rabbitmq.png)
+![rabbitmq](/prometheus-rabbitmq-metrics/images/rabbitmq-01.jpeg)
+![rabbitmq2](/prometheus-rabbitmq-metrics/images/rabbitmq-02.jpeg)
